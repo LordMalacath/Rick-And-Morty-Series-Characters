@@ -1,0 +1,114 @@
+@import 'styles/mixins';
+
+.character {
+  padding-top: 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile {
+    padding: 23px 24px 85px;
+  }
+
+  @include tablet {
+    padding: 23px 24px 85px;
+  }
+
+
+  button {
+    align-self: start;
+    margin-left: 50px;
+    @include font-back;
+    background-color: inherit;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    @include mobile {
+      margin: 0;
+    }
+  }
+
+
+  &__img {
+    margin-top: 31px;
+    margin-right: 26px;
+    max-width: 300px;
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border: 5px solid #F2F2F7;
+    border-radius: 50%;
+
+    @include mobile {
+      margin: 77px 0 0;
+      max-width: 150px;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+    }
+  }
+
+  &__name {
+    @include font-characterName;
+    margin-top: 16px;
+    text-align: center;
+
+    @include mobile {
+      margin: 34px 0 0;
+      font-size: 32px;
+    }
+  }
+
+
+  &__tittle {
+    @include font-tittle;
+    width: 157px;
+    margin-top: 48px;
+    margin-left: 63px;
+
+    @include mobile {
+      margin: 34px 0 0;
+      align-self: flex-start;
+    }
+  }
+
+  &__informations {
+    margin-top: 48px;
+    margin-left: 23px;
+    width: 413px;
+
+    @include mobile {
+      width: 100%;
+      margin: 16px 0 0;
+      padding-left: 16px;
+    }
+
+    @include tablet {
+      width: 100%;
+      margin: 16px 0 0;
+    }
+  }
+
+  .informations {
+    display: flex;
+    flex-direction: column;
+
+    &__subTittle {
+      @include font-subtittle;
+    }
+
+    &__text {
+      color: rgb(110, 121, 140)
+    }
+
+    &__divider {
+      height: 1px;
+      background: rgba(33, 33, 33, 0.08);
+      margin-top: 11px;
+    }
+  }
+}

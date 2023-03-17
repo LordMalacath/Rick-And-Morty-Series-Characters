@@ -1,0 +1,66 @@
+@import './variables.scss';
+
+@mixin font-cardName {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+@mixin font-tittle {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: rgb(142, 142, 147);
+}
+
+@mixin font-subtittle {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: rgb(8, 31, 50);
+}
+
+@mixin font-characterName {
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: rgb(8, 31, 50);
+}
+
+@mixin font-back {
+  font-family: "Karla";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: auto;
+  letter-spacing: 0;
+  color: rgb(0, 0, 0);
+}
+
+@mixin font-search {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@mixin mobile {
+  @media(max-width: map-get($breakpoints, "mobile")) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media(max-width: map-get($breakpoints, "tablet")) and (min-width: map-get($breakpoints, "mobile")) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media(min-width: map-get($breakpoints, "desktop-large")) {
+    @content;
+  }
+}
