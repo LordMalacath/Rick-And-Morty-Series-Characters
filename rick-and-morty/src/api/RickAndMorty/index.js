@@ -6,6 +6,7 @@ import { setCharacter, setCharacters } from 'redux/slices/characters';
 export const rickAndMortyApi = createApi({
   reducerPath: "rickAndMortyApi",
   baseQuery: fetchBaseQuery({ baseUrl: "https://rickandmortyapi.com/api/character/" }),
+  keepUnusedDataFor: 0,
   endpoints: (builder) => ({
     getCharacterByName: builder.query({
       query: (name) => `?name=${name}`,
